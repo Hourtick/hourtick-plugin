@@ -1,0 +1,113 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hourtick",
+  "version": "1.0.0",
+  "description": "Work in Hourtick from your AI app: track and log time, plan and update tasks, read and post in team chat, and hand work to your team's AI agents.",
+  "author": {
+    "name": "WeCode A/S",
+    "email": "info@hourtick.com",
+    "url": "https://hourtick.com"
+  },
+  "homepage": "https://hourtick.com/developers",
+  "repository": "https://github.com/Hourtick/hourtick-plugin",
+  "license": "MIT",
+  "keywords": [
+    "hourtick",
+    "hourtick time tracking",
+    "hourtick tasks",
+    "hourtick timesheet"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Hourtick",
+        "shortDescription": "Time, tasks and team chat",
+        "longDescription": "Hourtick is where a team and its AI agents plan work, talk about it and track the time it takes. Connect your Hourtick account and ask in plain language.\n\nWhat you can do:\n- Track time: start and stop a timer, log time you already spent on a project and task type, see your day, and get totals by client, project or person.\n- Tasks: list, create and update tasks by number, add subtasks and dependencies, comment, and start a timer on a task.\n- Team chat: read channels, search messages and post updates.\n- Notes and files on projects and clients: read them, add new ones and append to existing notes.\n- AI agents: see your team's agents, hand them a task and follow its progress. Admins can add agents and decide what each may do.\n\nWho it's for: agencies, consultancies and teams who bill for their time, and anyone who uses Hourtick at work.\n\nLimitations: the plugin acts with your own Hourtick permissions and only inside your workspace. It can't delete time entries, send invoices, or see other workspaces. Time is always logged as you. Changes that other people see, like chat posts, comments and task edits, are marked so your AI app can ask you before making them.",
+        "developerName": "WeCode A/S",
+        "category": "Productivity",
+        "capabilities": [
+          "Track and log time",
+          "Plan and update tasks",
+          "Read and post in team chat",
+          "Read and add project notes and files",
+          "Hand tasks to AI agents"
+        ],
+        "websiteURL": "https://hourtick.com",
+        "supportURL": "https://hourtick.com/contact",
+        "privacyPolicyURL": "https://hourtick.com/privacy",
+        "termsOfServiceURL": "https://hourtick.com/terms",
+        "defaultPrompt": [
+          "What did I work on today, and what's missing from my timesheet?",
+          "Show my open tasks and what's blocked.",
+          "Log 1.5 hours on Brand identity for yesterday."
+        ],
+        "brandColor": "#00A072",
+        "brandColorDark": "#34D399",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "onboardingSkill": "./skills/hourtick/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "See today's tracked time and what's running",
+              "prompt": "What have I tracked today, and is a timer running?",
+              "tools_triggered": "get_my_day, get_running_timer",
+              "expected_behavior": "Summarizes today's entries for the test user (project, task type, duration) and says whether a timer is running, without showing seconds."
+            },
+            {
+              "description": "Log time already spent",
+              "prompt": "Log 1 hour 30 minutes on the Brand identity project for yesterday, design work on logo sketches.",
+              "tools_triggered": "list_projects, log_time",
+              "expected_behavior": "Finds the Brand identity project for Fjord Coffee and its Design task type, logs 1:30 for yesterday with the note, and confirms the entry. If the task type is ambiguous it asks which one."
+            },
+            {
+              "description": "List open tasks",
+              "prompt": "Which of my team's tasks are still open on the Website relaunch and Booking app projects?",
+              "tools_triggered": "list_tasks",
+              "expected_behavior": "Lists open tasks with their numbers and statuses, such as #1 Finalise booking confirmation email (in progress) and #3 Fix date picker on small screens (to do)."
+            },
+            {
+              "description": "Create a task that waits on another",
+              "prompt": "Create a task 'Test booking emails on mobile' in Booking app that's blocked by #1.",
+              "tools_triggered": "create_task",
+              "expected_behavior": "Creates the task in Booking app, links it as blocked by #1, and reports the new task number and that it's blocked until #1 is done."
+            },
+            {
+              "description": "Report billable time by client",
+              "prompt": "How many hours did we track per client this month, and how much of it was billable?",
+              "tools_triggered": "get_report",
+              "expected_behavior": "Returns total and billable hours per client (Acme Travel, Fjord Coffee, Internal) for the current month from the test workspace."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Deleting time isn't supported",
+              "prompt": "Delete all my time entries from last month."
+            },
+            {
+              "description": "No access outside the connected workspace",
+              "prompt": "Show me the timesheets of people in another company's Hourtick workspace."
+            },
+            {
+              "description": "Hourtick doesn't send invoices",
+              "prompt": "Send Acme Travel an invoice for last week's hours."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "First release: time tracking, tasks with subtasks and dependencies, team chat, project notes and files, and handing work to AI agents, all through Hourtick's hosted MCP server with OAuth sign-in.",
+        "translations": {
+          "da-DK": {
+            "subtitle": "Tid, opgaver og teamchat",
+            "description": "Hourtick er stedet, hvor et team og dets AI-agenter planlægger arbejdet, taler om det og registrerer tiden. Forbind din Hourtick-konto og spørg på almindeligt sprog: start en timer, registrér tid, se og opdatér opgaver, læs og skriv i teamchatten, og giv opgaver til teamets AI-agenter. Pluginnet handler med dine egne rettigheder og kun i dit workspace."
+          }
+        }
+      }
+    }
+  }
+}

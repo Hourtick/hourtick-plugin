@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "hourtick": {
+      "type": "streamable-http",
+      "url": "https://hourtick.com/api/mcp"
+    }
+  }
+}
