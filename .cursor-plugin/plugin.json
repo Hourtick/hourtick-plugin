@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Work in Hourtick from Cursor and Grok Bot: track and log time, plan and update tasks (subtasks, blockers), read and post in team chat, and hand work to your team's AI agents, through Hourtick's hosted MCP server with OAuth sign-in.",
   "author": {
-    "name": "WeCode A/S",
+    "name": "Hourtick",
     "email": "info@hourtick.com"
   },
   "homepage": "https://hourtick.com/developers",
