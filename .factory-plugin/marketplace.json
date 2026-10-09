@@ -1,0 +1,22 @@
+{
+  "name": "hourtick",
+  "description": "Hourtick for Factory Droid: time, tasks, team chat and AI agents over Hourtick's hosted MCP server.",
+  "owner": {
+    "name": "Hourtick",
+    "email": "info@hourtick.com"
+  },
+  "plugins": [
+    {
+      "name": "hourtick",
+      "description": "Track and log time, work with tasks and team chat, and work as an Hourtick agent whose time and cost can be billed.",
+      "source": "./factory",
+      "category": "productivity",
+      "homepage": "https://hourtick.com/agents/factory-droid",
+      "tags": [
+        "time-tracking",
+        "tasks",
+        "mcp"
+      ]
+    }
+  ]
+}

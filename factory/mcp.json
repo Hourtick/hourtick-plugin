@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "hourtick": {
+      "type": "http",
+      "url": "https://hourtick.com/api/mcp"
+    }
+  }
+}

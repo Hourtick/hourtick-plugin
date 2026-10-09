@@ -1,0 +1,19 @@
+{
+  "name": "hourtick",
+  "description": "Work in Hourtick from Factory Droid: track and log time, plan and update tasks, read and post in team chat, and work as one of your team's AI agents so the time and cost of the work can be billed, through Hourtick's hosted MCP server.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Hourtick",
+    "email": "info@hourtick.com"
+  },
+  "homepage": "https://hourtick.com/agents/factory-droid",
+  "repository": "https://github.com/Hourtick/hourtick-plugin",
+  "license": "MIT",
+  "keywords": [
+    "hourtick",
+    "time tracking",
+    "timesheet",
+    "tasks",
+    "mcp"
+  ]
+}
