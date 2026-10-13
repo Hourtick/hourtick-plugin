@@ -3,7 +3,7 @@
   "description": "Hourtick for Factory Droid: time, tasks, team chat and AI agents over Hourtick's hosted MCP server.",
   "owner": {
     "name": "Hourtick",
-    "email": "info@hourtick.com"
+    "email": "hello@hourtick.com"
   },
   "plugins": [
     {

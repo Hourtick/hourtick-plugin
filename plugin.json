@@ -1,11 +1,11 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "hourtick",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Work in Hourtick from your AI app: track and log time, plan and update tasks, read and post in team chat, and hand work to your team's AI agents.",
   "author": {
     "name": "WeCode A/S",
-    "email": "info@hourtick.com",
+    "email": "hello@hourtick.com",
     "url": "https://hourtick.com"
   },
   "homepage": "https://hourtick.com/developers",
