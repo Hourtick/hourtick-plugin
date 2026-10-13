@@ -1,6 +1,6 @@
 # Hourtick plugin
 
-Work in [Hourtick](https://hourtick.com) from Cursor, Grok Bot, Grok Build, ChatGPT, Codex, Devin and Factory Droid: track and log time, plan and update tasks, read and post in team chat, and hand work to your team's AI agents.
+Work in [Hourtick](https://hourtick.com) from Claude (Claude Code, Cowork and claude.ai), Cursor, Grok Bot, Grok Build, ChatGPT, Codex, Devin and Factory Droid: track and log time, plan and update tasks, read and post in team chat, and hand work to your team's AI agents.
 
 The plugin connects to Hourtick's hosted MCP server at `https://hourtick.com/api/mcp`. You sign in with your Hourtick account (OAuth) the first time you use it; the plugin then acts with your own permissions, inside your workspace only. No code runs on your machine: the plugin is one skill, MCP configuration and icons.
 
@@ -8,6 +8,7 @@ The plugin connects to Hourtick's hosted MCP server at `https://hourtick.com/api
 
 | Path | What it is |
 | --- | --- |
+| `.claude-plugin/plugin.json`, `.mcp.json` | Claude plugin manifest and MCP server (Claude Code and Cowork, through Anthropic's plugin directory) |
 | `.cursor-plugin/plugin.json` | Cursor Plugin manifest (Cursor and Grok Bot, through the Cursor Marketplace) |
 | `plugin.json`, `mcp.json` | Agent Plugins manifest and MCP server (ChatGPT and Codex plugin directory) |
 | `.grok-plugin/plugin.json`, `.mcp.json` | Grok Build manifest and MCP server |
@@ -18,6 +19,7 @@ The plugin connects to Hourtick's hosted MCP server at `https://hourtick.com/api
 
 ## Install
 
+- **Claude Code and Cowork:** find Hourtick in the plugin directory (in Claude Code: `/plugin`), install it, and sign in to Hourtick when Claude asks (in Claude Code: `/mcp`). In claude.ai and the Claude apps, Hourtick is also a connector: Settings → Connectors.
 - **Cursor and Grok Bot:** add Hourtick from the Cursor Marketplace (in Grok Bot: Plugins → search "Hourtick"), then choose Authorize and sign in to Hourtick.
 - **Grok Build:** `grok plugin install hourtick`, or `/marketplace` inside Grok Build.
 - **ChatGPT and Codex:** find Hourtick in the plugin directory.
@@ -34,7 +36,11 @@ Ask in plain language, for example:
 - "Log 1.5 hours on Brand identity for yesterday, design work."
 - "Post a status update in #general."
 
-Nothing needs configuring: no API keys or variables. The plugin can't delete time entries or send invoices, and it only sees the workspace you signed in to.
+Nothing needs configuring: no API keys or variables. The plugin can't delete time entries, and it only sees the workspace you signed in to. Changes other people see (chat posts, comments, task edits, sending an invoice through your workspace's own Stripe account) are marked so your AI app asks you first.
+
+## What the plugin sends and where
+
+The plugin runs nothing on your computer and has no hooks or scripts. Its only connection is the Hourtick MCP server at `https://hourtick.com/api/mcp`, which your AI app calls with your own OAuth sign-in when you ask it to do something in Hourtick. What the app sends is what the request needs: for example the project, duration and note of a time entry, or the text of a chat post. Hourtick stores it in your workspace like anything you enter in the app. See the [privacy policy](https://hourtick.com/privacy).
 
 ## Support
 

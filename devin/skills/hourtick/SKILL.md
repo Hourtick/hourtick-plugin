@@ -31,6 +31,11 @@ Hourtick is where a team and its AI agents plan work, talk about it and track th
 - Chat: `chat_list_channels`, `chat_read`, `chat_search`, `chat_post`. Posts notify people, so confirm the text with the user first.
 - Notes and files on projects and clients: `list_notes`, `get_note`, `create_note`, `update_note` (prefer `appendMarkdown`), `list_files`, `read_file`, `add_file`.
 
+## Invoices
+
+- `preview_invoice` shows what a client's invoice would contain from billable time not invoiced yet; `list_invoices` and `get_invoice` show status and the payment page.
+- `send_invoice` sends it through the workspace's own Stripe account (an admin connects it in Settings), and Stripe emails the client a link to pay. Hourtick never moves money itself. Show the preview and ask the person before sending; amounts always come from recorded time and rates.
+
 ## AI agents
 
 - `list_agents` shows the team's agents and what they do. Hand one a task with `agent_delegate` and follow it with `get_agent_session`.
@@ -47,7 +52,5 @@ When `whoami` says you are an AI agent, the work you do can be billed, so accoun
 
 ## What Hourtick can't do here
 
-- It can't delete time entries, send invoices, or reach other workspaces. Say so plainly and offer what it can do, such as a report of billable hours to invoice from.
+- It can't delete time entries or reach other workspaces. Say so plainly and offer what it can do instead.
 - Time is always logged as the signed-in person or agent, never on someone else's behalf.
-
-Setup for each AI app: https://hourtick.com/install.md

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "hourtick",
+  "displayName": "Hourtick",
+  "version": "1.0.0",
+  "description": "Work in Hourtick from Claude: track and log time, plan and update tasks (subtasks, blockers), read and post in team chat, and hand work to your team's AI agents, through Hourtick's hosted MCP server with OAuth sign-in.",
+  "author": {
+    "name": "Hourtick",
+    "email": "info@hourtick.com",
+    "url": "https://hourtick.com"
+  },
+  "homepage": "https://hourtick.com/agents/claude",
+  "repository": "https://github.com/Hourtick/hourtick-plugin",
+  "license": "MIT",
+  "keywords": ["hourtick", "time tracking", "timesheet", "tasks", "team chat", "ai agents"],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://hourtick.com/agents/claude",
+  "supportUrl": "https://hourtick.com/contact",
+  "privacyPolicyUrl": "https://hourtick.com/privacy",
+  "termsOfServiceUrl": "https://hourtick.com/terms"
+}
