@@ -22,7 +22,7 @@
       "interface": {
         "displayName": "Hourtick",
         "shortDescription": "Time, tasks and team chat",
-        "longDescription": "Hourtick is where a team and its AI agents plan work, talk about it and track the time it takes. Connect your Hourtick account and ask in plain language.\n\nWhat you can do:\n- Track time: start and stop a timer, log time you already spent on a project and task type, see your day, and get totals by client, project or person.\n- Tasks: list, create and update tasks by number, add subtasks and dependencies, comment, and start a timer on a task.\n- Team chat: read channels, search messages and post updates.\n- Notes and files on projects and clients: read them, add new ones and append to existing notes.\n- AI agents: see your team's agents, hand them a task and follow its progress. Admins can add agents and decide what each may do.\n\nWho it's for: agencies, consultancies and teams who bill for their time, and anyone who uses Hourtick at work.\n\nLimitations: the plugin acts with your own Hourtick permissions and only inside your workspace. It can't delete time entries, send invoices, or see other workspaces. Time is always logged as you. Changes that other people see, like chat posts, comments and task edits, are marked so your AI app can ask you before making them.",
+        "longDescription": "Hourtick is where a team and its AI agents plan work, talk about it and track the time it takes. Connect your Hourtick account and ask in plain language.\n\nWhat you can do:\n- Track time: start and stop a timer, log time you already spent on a project and task type, see your day, and get totals by client, project or person.\n- Tasks: list, create and update tasks by number, add subtasks and dependencies, comment, and start a timer on a task.\n- Team chat: read channels, search messages and post updates.\n- Notes and files on projects and clients: read them, add new ones and append to existing notes.\n- AI agents: see your team's agents, hand them a task and follow its progress. Admins can add agents and decide what each may do.\n- Invoices: preview what a client's invoice would contain from billable time, and, after you confirm, send it through your workspace's own Stripe account. Stripe emails the client a payment link; Hourtick never moves money itself.\n\nWho it's for: agencies, consultancies and teams who bill for their time, and anyone who uses Hourtick at work.\n\nLimitations: the plugin acts with your own Hourtick permissions and only inside your workspace. It can't delete time entries, move money, or see other workspaces. Time is always logged as you. Changes that other people see, like chat posts, comments, task edits and invoices, are marked so your AI app can ask you before making them.",
         "developerName": "WeCode A/S",
         "category": "Productivity",
         "capabilities": [
@@ -91,16 +91,16 @@
               "prompt": "Show me the timesheets of people in another company's Hourtick workspace."
             },
             {
-              "description": "Hourtick doesn't send invoices",
-              "prompt": "Send Acme Travel an invoice for last week's hours."
+              "description": "Hourtick doesn't move money",
+              "prompt": "Pay the supplier invoice from Fjord Coffee out of our account."
             }
           ]
         },
         "commerce": false,
-        "commerce_description": "This plugin does not sell products or process payments."
+        "commerce_description": "This plugin does not sell products or process payments. Invoices are sent through the workspace's own Stripe account, which handles any payment."
       },
       "publication": {
-        "release_notes": "First release: time tracking, tasks with subtasks and dependencies, team chat, project notes and files, and handing work to AI agents, all through Hourtick's hosted MCP server with OAuth sign-in.",
+        "release_notes": "Invoices: preview a client's invoice from billable time and, after you confirm, send it through your workspace's own Stripe account. Updated contact email (hello@hourtick.com). The skill no longer links to an external setup page.",
         "translations": {
           "da-DK": {
             "subtitle": "Tid, opgaver og teamchat",
