@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "hourtick",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Work in Hourtick from your AI app: track and log time, plan and update tasks, read and post in team chat, and hand work to your team's AI agents.",
   "author": {
     "name": "WeCode A/S",
@@ -100,7 +100,7 @@
         "commerce_description": "This plugin does not sell products or process payments. Invoices are sent through the workspace's own Stripe account, which handles any payment."
       },
       "publication": {
-        "release_notes": "Invoices: preview a client's invoice from billable time and, after you confirm, send it through your workspace's own Stripe account. Updated contact email (hello@hourtick.com). The skill no longer links to an external setup page.",
+        "release_notes": "AI apps can open the files on a task: get_task lists them with ids, and read_attachment returns screenshots as images and text files as text. Invoices: preview and send through your workspace's own Stripe account. Contact email hello@hourtick.com.",
         "translations": {
           "da-DK": {
             "subtitle": "Tid, opgaver og teamchat",

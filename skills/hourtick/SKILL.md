@@ -24,6 +24,7 @@ Hourtick is where a team and its AI agents plan work, talk about it and track th
 ## Tasks
 
 - `list_tasks`, `create_task`, `update_task`, `comment_on_task`, `start_timer_on_task`, always by task number.
+- `get_task` lists the task's files with their ids. Open one with `read_attachment`: screenshots and other images come back as images you can look at, text files as text. Look at the screenshots before working on a bug.
 - Subtasks: `create_task` with `parent`. Dependencies: `blockedBy` on create, `addBlockedBy` / `removeBlockedBy` / `addBlocks` / `removeBlocks` on update. A blocked task can't move to in progress, review or done until its blockers are done; say so instead of retrying.
 
 ## Chat, notes and files

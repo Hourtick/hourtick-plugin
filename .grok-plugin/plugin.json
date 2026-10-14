@@ -1,6 +1,6 @@
 {
   "name": "hourtick",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Hourtick for Grok Build: track time, work with tasks and team chat, and take work as one of your team's AI agents, through Hourtick's hosted MCP server with OAuth sign-in.",
   "author": {
     "name": "WeCode A/S",
